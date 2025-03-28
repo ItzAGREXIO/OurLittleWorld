@@ -1,0 +1,25 @@
+#countdown {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: #FF6F91;
+    margin: 20px 0;
+    background: rgba(255, 209, 220, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 209, 220, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  #countdown:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 209, 220, 0.5);
+  }
+  
+  @media (max-width: 480px) {
+    #countdown {
+      font-size: 20px;
+      padding: 10px;
+    }
+  }

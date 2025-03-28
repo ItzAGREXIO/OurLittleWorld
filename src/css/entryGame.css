@@ -1,0 +1,26 @@
+.entry-game {
+    position: relative;
+  }
+  
+  .entry-game .buttons {
+    position: relative;
+  }
+  
+  .no-btn {
+    position: relative;
+  }
+  
+  @media (max-width: 480px) {
+    .entry-game h1 {
+      font-size: 36px;
+    }
+  
+    .entry-game p {
+      font-size: 16px;
+    }
+  
+    .entry-game .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
