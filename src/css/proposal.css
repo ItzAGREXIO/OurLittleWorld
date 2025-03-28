@@ -1,0 +1,134 @@
+.proposal-page {
+  position: relative;
+  z-index: 0;
+}
+
+/* Ensure shared.css styles are not overridden */
+.proposal-page h1,
+.proposal-page p {
+  /* Inherit styles from shared.css */
+}
+
+/* Message Input */
+.message-input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for spacing */
+  margin: 30px 0; /* Increased margin for more spacing */
+  width: 100%;
+  max-width: 500px; /* Increased width for better appearance */
+  z-index: 1;
+}
+
+.message-input input {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  border-radius: 15px; /* Slightly larger border-radius */
+  padding: 15px; /* Increased padding */
+  color: #E0B0FF;
+  font-family: 'Caveat', cursive;
+  font-size: 18px; /* Increased font size */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.message-input input::placeholder {
+  color: #FF85C0;
+}
+
+.message-input input:focus {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8); /* Enhanced glow on focus */
+  border-color: #FF69B4;
+}
+
+.message-input button {
+  background: #FF69B4;
+  color: #0F0A1A;
+  padding: 10px 20px; /* Increased padding */
+  border-radius: 15px;
+  border: none;
+  font-family: 'Caveat', cursive;
+  font-size: 18px; /* Increased font size */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 105, 180, 0.5);
+  transition: all 0.3s ease;
+}
+
+.message-input button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Message Saved Popup */
+.message-saved {
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  color: #FF69B4;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Yes Button */
+.yes-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.yes-btn::after {
+  content: '✨';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  font-size: 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.yes-btn:hover::after {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* No Button */
+.no-btn {
+  cursor: pointer;
+}
+
+/* Funny Message */
+.funny-message {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #FF85C0;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Hearts */
+.hearts {
+  font-size: 30px; /* Increased size */
+  margin-top: 30px; /* Increased margin */
+  z-index: 1;
+}
+
+/* Falling Hearts */
+.falling-heart {
+  position: absolute;
+  font-size: 20px;
+  animation: fall 5s linear forwards;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

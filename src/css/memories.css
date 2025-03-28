@@ -1,0 +1,193 @@
+.memories-page {
+  position: relative;
+  z-index: 0;
+}
+
+/* Memories Grid */
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Memory Card */
+.memory-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.memory-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+}
+
+.memory-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #FF69B4;
+  margin: 10px 0;
+}
+
+.memory-card p {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #E0B0FF;
+  margin: 5px 0;
+}
+
+.memory-emoji {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Add Memory Section */
+.add-memory {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.add-memory h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #FF69B4;
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+  margin-bottom: 20px;
+}
+
+.add-memory input {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  color: #E0B0FF;
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  outline: none;
+  margin: 10px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.add-memory input::placeholder {
+  color: #FF85C0;
+}
+
+.add-memory input:focus {
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+
+.add-memory button {
+  background: #FF69B4;
+  color: #0F0A1A;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 105, 180, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-memory button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Memory Popup */
+.memory-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.popup-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #FF69B4;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  color: #E0B0FF;
+  margin: 10px 0;
+}
+
+.memory-emoji.large {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.popup-content button {
+  background: #FF69B4;
+  color: #0F0A1A;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 105, 180, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.popup-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Falling Hearts */
+.falling-heart {
+  position: absolute;
+  font-size: 20px;
+  animation: fall 5s linear forwards;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

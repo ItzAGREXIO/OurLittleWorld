@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/OurLittleWorld/static/css/main.fc0fd2a9.css",
+    "main.js": "/OurLittleWorld/static/js/main.1640431b.js",
+    "index.html": "/OurLittleWorld/index.html",
+    "main.fc0fd2a9.css.map": "/OurLittleWorld/static/css/main.fc0fd2a9.css.map",
+    "main.1640431b.js.map": "/OurLittleWorld/static/js/main.1640431b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc0fd2a9.css",
+    "static/js/main.1640431b.js"
+  ]
+}
